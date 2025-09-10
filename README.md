@@ -8,12 +8,24 @@
 
 ## 🚀 功能特点
 
-- 精选AI工具导航
-- 文本工具（对话大模型）
-- 图像工具
-- 视频工具
-- 音频工具
-- 效率工具
+- 智能对话助手（即将上线）
+  - 点击首页英雄区图片即可开启对话
+  - 支持多轮对话
+  - 实时响应
+  - Markdown 格式支持
+  - 代码高亮显示
+- AI工具导航
+  - AI精选工具
+  - AI聊天助手
+  - AI图像工具
+  - AI办公工具
+  - AI音频工具
+  - AI视频工具
+- 工具特色
+  - 国内/海外标签区分
+  - 详细的功能介绍
+  - 使用场景说明
+  - 官方链接直达
 - 知识库内容精选
 - 最新AI产品推荐
 
@@ -21,23 +33,45 @@
 
 ```
 huaqiao-ai-tools/
-├── docs/               # 项目文档
-├── public/            # 静态资源
-│   └── images/       # 图片资源
-├── src/              # 源代码
-│   ├── config/      # 配置文件
-│   ├── pages/       # 文章页面
-│   ├── scripts/     # JavaScript脚本
-│   └── styles/      # CSS样式
-└── index.html        # 主页面
+├── docs/                # 项目文档
+├── public/             # 静态资源
+│   └── images/        # 图片资源
+│       ├── logos/    # 工具图标
+│       │   ├── chat/    # 聊天助手图标
+│       │   ├── image/   # 图像工具图标
+│       │   ├── office/  # 办公工具图标
+│       │   ├── audio/   # 音频工具图标
+│       │   └── video/   # 视频工具图标
+├── src/               # 源代码
+│   ├── config/       # 配置文件
+│   ├── pages/        # 文章页面
+│   ├── scripts/      # JavaScript脚本
+│   │   ├── script.js     # 主要脚本
+│   │   └── chat-modal.js # 对话框组件
+│   └── styles/       # CSS样式
+│       ├── style.css     # 主要样式
+│       └── chat-modal.css # 对话框样式
+└── index.html         # 主页面
 ```
 
 ## 🛠️ 技术栈
 
 - HTML5
 - CSS3
+  - Flexbox & Grid 布局
+  - CSS 动画和过渡效果
+  - 响应式设计
+  - 毛玻璃效果
 - JavaScript
-- 响应式设计
+  - ES6+ 特性
+  - Promise & Async/Await
+  - WebSocket（即将实现）
+  - DOM 操作和事件处理
+- 交互设计
+  - 流畅的动画效果
+  - 直观的用户界面
+  - 移动端适配
+  - 优雅的加载状态
 
 ## 🤝 贡献指南
 
