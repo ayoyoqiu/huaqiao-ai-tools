@@ -7,6 +7,14 @@ document.addEventListener('DOMContentLoaded', function() {
     initMobileMenu();
     initScrollEffects();
     initTooltips();
+    
+    // 手动触发"精选工具"按钮的点击事件
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    filterButtons.forEach(button => {
+        if (button.textContent.trim() === '精选工具') {
+            button.click();
+        }
+    });
 });
 
 // 筛选卡片的核心逻辑
