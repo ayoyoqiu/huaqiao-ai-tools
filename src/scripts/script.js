@@ -9,10 +9,49 @@ document.addEventListener('DOMContentLoaded', function() {
     initTooltips();
 });
 
+// 筛选卡片的核心逻辑
+function filterCards(selectedCategory, toolCards) {
+    toolCards.forEach(card => {
+        const cardCategory = card.getAttribute('data-category');
+        const categories = cardCategory.split(' ');
+        
+        // 关闭所有卡片的详情
+        card.classList.remove('active');
+        const content = card.querySelector('.tool-content');
+        if (content) {
+            content.style.display = 'none';
+        }
+        
+        // 显示或隐藏卡片
+        if ((selectedCategory === '精选工具' && categories.includes('精选工具')) || 
+            (selectedCategory !== '精选工具' && categories.includes(selectedCategory))) {
+            card.classList.remove('hidden');
+            card.style.display = 'block';
+            // 添加淡入动画
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            setTimeout(() => {
+                card.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+                card.style.opacity = '1';
+                card.style.transform = 'translateY(0)';
+            }, 50);
+        } else {
+            card.classList.add('hidden');
+            card.style.display = 'none';
+        }
+    });
+}
+
 // 工具筛选功能
 function initToolFilters() {
     const filterButtons = document.querySelectorAll('.filter-btn');
     const toolCards = document.querySelectorAll('.tool-card');
+
+    // 初始筛选：触发"精选工具"按钮的点击事件
+    const activeButton = document.querySelector('.filter-btn.active');
+    if (activeButton) {
+        filterCards(activeButton.textContent.trim(), toolCards);
+    }
 
     filterButtons.forEach(button => {
         button.addEventListener('click', function() {
@@ -22,38 +61,8 @@ function initToolFilters() {
             // 为被点击的按钮添加 'active' 类
             this.classList.add('active');
             
-            // 获取选中的分类
-            const selectedCategory = this.textContent.trim();
-            
-            // 筛选工具卡片
-            toolCards.forEach(card => {
-                const cardCategory = card.getAttribute('data-category');
-                const categories = cardCategory.split(' ');
-                
-                // 关闭所有卡片的详情
-                card.classList.remove('active');
-                const content = card.querySelector('.tool-content');
-                if (content) {
-                    content.style.display = 'none';
-                }
-                
-                // 显示或隐藏卡片
-                if ((selectedCategory === '精选工具' && categories.includes('精选工具')) || 
-                    (selectedCategory !== '精选工具' && categories.includes(selectedCategory))) {
-                    card.classList.remove('hidden');
-                    card.style.display = 'block';
-                    // 添加淡入动画
-                    card.style.opacity = '0';
-                    card.style.transform = 'translateY(20px)';
-                    setTimeout(() => {
-                        card.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
-                        card.style.opacity = '1';
-                        card.style.transform = 'translateY(0)';
-                    }, 50);
-                } else {
-                    card.classList.add('hidden');
-                    card.style.display = 'none';
-                }
+            // 获取选中的分类并执行筛选
+            filterCards(this.textContent.trim(), toolCards);
             });
         });
     });
