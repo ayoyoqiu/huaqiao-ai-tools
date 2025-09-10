@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI工具图标展示</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 40px;
+        }
+
+        .category {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: #666;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .tools {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .tool {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 15px;
+            border-radius: 8px;
+            background: #f9f9f9;
+            transition: all 0.3s ease;
+        }
+
+        .tool:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            font-weight: 500;
+            color: white;
+        }
+
+        .name {
+            font-size: 16px;
+            color: #333;
+        }
+
+        /* 图标颜色 */
+        .chat .icon { background: linear-gradient(135deg, #8A2BE2, #4A90E2); }
+        .image .icon { background: linear-gradient(135deg, #FF4D4F, #FF7A45); }
+        .office .icon { background: linear-gradient(135deg, #13C2C2, #36CFC9); }
+        .audio .icon { background: linear-gradient(135deg, #722ED1, #2F54EB); }
+        .video .icon { background: linear-gradient(135deg, #FA541C, #FA8C16); }
+
+        /* 标签 */
+        .tag {
+            font-size: 12px;
+            padding: 2px 6px;
+            border-radius: 4px;
+            margin-left: auto;
+        }
+
+        .china {
+            background: #FFE4E4;
+            color: #FF4D4F;
+        }
+
+        .global {
+            background: #E6F7FF;
+            color: #1890FF;
+        }
+    </style>
+</head>
+<body>
+    <h1>AI工具图标展示</h1>
+
+    <!-- AI聊天助手 -->
+    <div class="category">
+        <h2>AI聊天助手</h2>
+        <div class="tools">
+            <div class="tool chat">
+                <div class="icon">豆</div>
+                <div class="name">豆包</div>
+                <span class="tag china">国内</span>
+            </div>
+            <div class="tool chat">
+                <div class="icon">K</div>
+                <div class="name">Kimi Chat</div>
+                <span class="tag china">国内</span>
+            </div>
+            <div class="tool chat">
+                <div class="icon">D</div>
+                <div class="name">DeepSeek</div>
+                <span class="tag china">国内</span>
+            </div>
+            <div class="tool chat">
+                <div class="icon">文</div>
+                <div class="name">文心一言</div>
+                <span class="tag china">国内</span>
+            </div>
+            <div class="tool chat">
+                <div class="icon">星</div>
+                <div class="name">讯飞星火</div>
+                <span class="tag china">国内</span>
+            </div>
+            <div class="tool chat">
+                <div class="icon">通</div>
+                <div class="name">通义千问</div>
+                <span class="tag china">国内</span>
+            </div>
+            <div class="tool chat">
+                <div class="icon">智</div>
+                <div class="name">智谱清言</div>
+                <span class="tag china">国内</span>
+            </div>
+            <div class="tool chat">
+                <div class="icon">C</div>
+                <div class="name">ChatGPT</div>
+                <span class="tag global">海外</span>
+            </div>
+            <div class="tool chat">
+                <div class="icon">G</div>
+                <div class="name">Grok</div>
+                <span class="tag global">海外</span>
+            </div>
+            <div class="tool chat">
+                <div class="icon">C</div>
+                <div class="name">Claude</div>
+                <span class="tag global">海外</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- AI图像工具 -->
+    <div class="category">
+        <h2>AI图像工具</h2>
+        <div class="tools">
+            <div class="tool image">
+                <div class="icon">梦</div>
+                <div class="name">即梦</div>
+                <span class="tag china">国内</span>
+            </div>
+            <div class="tool image">
+                <div class="icon">万</div>
+                <div class="name">通义万相</div>
+                <span class="tag china">国内</span>
+            </div>
+            <div class="tool image">
+                <div class="icon">M</div>
+                <div class="name">Midjourney</div>
+                <span class="tag global">海外</span>
+            </div>
+            <div class="tool image">
+                <div class="icon">D</div>
+                <div class="name">DALL·E 3</div>
+                <span class="tag global">海外</span>
+            </div>
+            <div class="tool image">
+                <div class="icon">秒</div>
+                <div class="name">秒画</div>
+                <span class="tag china">国内</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- AI办公工具 -->
+    <div class="category">
+        <h2>AI办公工具</h2>
+        <div class="tools">
+            <div class="tool office">
+                <div class="icon">W</div>
+                <div class="name">WPS AI</div>
+                <span class="tag china">国内</span>
+            </div>
+            <div class="tool office">
+                <div class="icon">腾</div>
+                <div class="name">腾讯文档</div>
+                <span class="tag china">国内</span>
+            </div>
+            <div class="tool office">
+                <div class="icon">P</div>
+                <div class="name">AI PPT</div>
+                <span class="tag china">国内</span>
+            </div>
+            <div class="tool office">
+                <div class="icon">会</div>
+                <div class="name">腾讯会议</div>
+                <span class="tag china">国内</span>
+            </div>
+            <div class="tool office">
+                <div class="icon">树</div>
+                <div class="name">TreeMind</div>
+                <span class="tag china">国内</span>
+            </div>
+            <div class="tool office">
+                <div class="icon">塔</div>
+                <div class="name">秘塔AI</div>
+                <span class="tag china">国内</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- AI音频工具 -->
+    <div class="category">
+        <h2>AI音频工具</h2>
+        <div class="tools">
+            <div class="tool audio">
+                <div class="icon">魔</div>
+                <div class="name">魔音工坊</div>
+                <span class="tag china">国内</span>
+            </div>
+            <div class="tool audio">
+                <div class="icon">S</div>
+                <div class="name">Suno</div>
+                <span class="tag global">海外</span>
+            </div>
+            <div class="tool audio">
+                <div class="icon">海</div>
+                <div class="name">海绵音乐</div>
+                <span class="tag china">国内</span>
+            </div>
+            <div class="tool audio">
+                <div class="icon">N</div>
+                <div class="name">NotebookLM</div>
+                <span class="tag global">海外</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- AI视频工具 -->
+    <div class="category">
+        <h2>AI视频工具</h2>
+        <div class="tools">
+            <div class="tool video">
+                <div class="icon">V</div>
+                <div class="name">Vidu</div>
+                <span class="tag china">国内</span>
+            </div>
+            <div class="tool video">
+                <div class="icon">灵</div>
+                <div class="name">可灵AI</div>
+                <span class="tag china">国内</span>
+            </div>
+            <div class="tool video">
+                <div class="icon">梦</div>
+                <div class="name">即梦AI</div>
+                <span class="tag china">国内</span>
+            </div>
+            <div class="tool video">
+                <div class="icon">映</div>
+                <div class="name">剪映AI</div>
+                <span class="tag china">国内</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
