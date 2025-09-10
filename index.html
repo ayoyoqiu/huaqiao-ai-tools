@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>花桥小智 - AI工具导航</title>
+    <link rel="stylesheet" href="src/styles/style.css">
+    <link rel="icon" href="https://img.ljcdn.com/newhouse-activity/phpPrFrxn1757406585.png.600x.png?v=3" type="image/png">
+</head>
+<body>
+    <div id="app">
+        <header>
+            <nav class="main-nav">
+                <div class="logo">
+                    <a href="#"><img src="public/images/5花桥学堂logo蓝横.png" alt="花桥学堂 Logo"></a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">培训产品</a></li>
+                    <li><a href="#">标杆风采</a></li>
+                    <li><a href="#">最新动态</a></li>
+                    <li><a href="#">AI工具</a></li>
+                    <li><a href="#">花桥小智</a></li>
+                </ul>
+                <div class="nav-right">
+                    <div class="language-switcher">
+                        <span>🇨🇳 中文</span>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <section class="hero">
+                <div class="hero-content">
+                    <h1 class="hero-title">探索AI世界的无限可能</h1>
+                    <p class="hero-subtitle">发现最新、最全面的AI工具和资讯，助您在AI时代浪潮中乘风破浪</p>
+                    <div class="hero-actions">
+                        <a href="#tools" class="btn-primary">开始探索</a>
+                        <a href="#knowledge" class="btn-secondary">了解知识库</a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="hero-image-container">
+                        <img src="https://img.ljcdn.com/newhouse-activity/phpuBDqRR1757056305.svg+xml.600x.png" alt="花桥小智功能展示" class="hero-image">
+                    </div>
+                </div>
+            </section>
+            <section class="tools-section" id="tools">
+                <div class="section-header">
+                    <h2><span class="gradient-text">AI工具</span><span class="normal-text">导航</span></h2>
+                    <p>发现革新性的 AI 工具，让你始终领先一步</p>
+                </div>
+                <div class="tools-filter">
+                    <button class="filter-btn active">精选工具</button>
+                    <button class="filter-btn">文本工具</button>
+                    <button class="filter-btn">图像工具</button>
+                    <button class="filter-btn">视频工具</button>
+                    <button class="filter-btn">音频工具</button>
+                    <button class="filter-btn">效率工具</button>
+                </div>
+                <div class="tools-grid">
+                    <!-- 国内对话大模型工具 -->
+                    <div class="tool-card" data-tool="doubao" data-category="精选工具 文本工具">
+                        <div class="tool-tag china">国内</div>
+                        <div class="tool-icon blue"></div>
+                        <h3>豆包</h3>
+                        <p>字节跳动开发的智能对话助手，支持自然语言交互</p>
+                        <div class="tool-content" style="display: none;">
+                            <h4>🤖 豆包 AI 助手</h4>
+                            <p><strong>功能特点：</strong></p>
+                            <ul>
+                                <li>基于大语言模型的智能对话</li>
+                                <li>支持多轮对话和上下文理解</li>
+                                <li>适用于日常对话和学习场景</li>
+                                <li>提供丰富的创作辅助功能</li>
+                            </ul>
+                            <p><strong>使用场景：</strong>日常对话、学习辅导、内容创作</p>
+                            <a href="https://www.doubao.com" target="_blank" class="try-btn">立即试用</a>
+                        </div>
+                    </div>
+
+                    <div class="tool-card" data-tool="kimi" data-category="精选工具 文本工具">
+                        <div class="tool-tag china">国内</div>
+                        <div class="tool-icon purple"></div>
+                        <h3>Kimi Chat</h3>
+                        <p>月之暗面开发的智能对话工具，擅长内容创作和知识查询</p>
+                        <div class="tool-content" style="display: none;">
+                            <h4>🤖 Kimi Chat</h4>
+                            <p><strong>功能特点：</strong></p>
+                            <ul>
+                                <li>支持长上下文对话交互</li>
+                                <li>强大的知识库和信息检索</li>
+                                <li>优秀的内容创作能力</li>
+                                <li>用户友好的界面设计</li>
+                            </ul>
+                            <p><strong>使用场景：</strong>知识问答、内容创作、学习研究</p>
+                            <a href="https://kimi.moonshot.cn" target="_blank" class="try-btn">立即试用</a>
+                        </div>
+                    </div>
+
+                    <div class="tool-card" data-tool="deepseek" data-category="文本工具">
+                        <div class="tool-tag china">国内</div>
+                        <div class="tool-icon green"></div>
+                        <h3>DeepSeek-V2</h3>
+                        <p>深度求索开发的开源大语言模型，支持多轮对话</p>
+                        <div class="tool-content" style="display: none;">
+                            <h4>🤖 DeepSeek-V2</h4>
+                            <p><strong>功能特点：</strong></p>
+                            <ul>
+                                <li>开源大语言模型</li>
+                                <li>支持复杂问题解答</li>
+                                <li>注重高效性和低成本</li>
+                                <li>适合开发者使用</li>
+                            </ul>
+                            <p><strong>使用场景：</strong>开发研究、知识问答、技术支持</p>
+                            <a href="https://www.deepseek.com" target="_blank" class="try-btn">立即试用</a>
+                        </div>
+                    </div>
+
+                    <div class="tool-card" data-tool="ernie" data-category="文本工具">
+                        <div class="tool-tag china">国内</div>
+                        <div class="tool-icon red"></div>
+                        <h3>文心一言</h3>
+                        <p>百度开发的智能对话产品，基于文心大模型</p>
+                        <div class="tool-content" style="display: none;">
+                            <h4>🤖 文心一言</h4>
+                            <p><strong>功能特点：</strong></p>
+                            <ul>
+                                <li>强大的中文理解能力</li>
+                                <li>支持多场景智能对话</li>
+                                <li>丰富的知识库支持</li>
+                                <li>深度行业应用能力</li>
+                            </ul>
+                            <p><strong>使用场景：</strong>智能问答、内容创作、行业应用</p>
+                            <a href="https://yiyan.baidu.com" target="_blank" class="try-btn">立即试用</a>
+                        </div>
+                    </div>
+
+                    <div class="tool-card" data-tool="spark" data-category="文本工具">
+                        <div class="tool-tag china">国内</div>
+                        <div class="tool-icon pink"></div>
+                        <h3>讯飞星火</h3>
+                        <p>科大讯飞推出的大语言模型对话工具，擅长语音交互</p>
+                        <div class="tool-content" style="display: none;">
+                            <h4>🤖 讯飞星火</h4>
+                            <p><strong>功能特点：</strong></p>
+                            <ul>
+                                <li>优秀的语音识别与合成能力</li>
+                                <li>支持多语言和方言交互</li>
+                                <li>丰富的垂直领域知识</li>
+                                <li>强大的多模态理解能力</li>
+                            </ul>
+                            <p><strong>使用场景：</strong>教育培训、客服支持、内容创作</p>
+                            <a href="https://xinghuo.xfyun.cn" target="_blank" class="try-btn">立即试用</a>
+                        </div>
+                    </div>
+
+                    <div class="tool-card" data-tool="qianwen" data-category="文本工具">
+                        <div class="tool-tag china">国内</div>
+                        <div class="tool-icon cyan"></div>
+                        <h3>通义千问</h3>
+                        <p>阿里巴巴开发的智能对话助手，适用于多种商业场景</p>
+                        <div class="tool-content" style="display: none;">
+                            <h4>🤖 通义千问</h4>
+                            <p><strong>功能特点：</strong></p>
+                            <ul>
+                                <li>强大的商业场景理解能力</li>
+                                <li>支持多轮对话和任务处理</li>
+                                <li>丰富的电商领域知识</li>
+                                <li>优秀的多模态交互能力</li>
+                            </ul>
+                            <p><strong>使用场景：</strong>电商服务、云计算应用、智能客服</p>
+                            <a href="https://tongyi.aliyun.com" target="_blank" class="try-btn">立即试用</a>
+                        </div>
+                    </div>
+
+                    <div class="tool-card" data-tool="chatglm" data-category="文本工具">
+                        <div class="tool-tag china">国内</div>
+                        <div class="tool-icon orange"></div>
+                        <h3>智谱清言</h3>
+                        <p>智谱AI开发的对话助手，基于GLM架构，注重中文理解</p>
+                        <div class="tool-content" style="display: none;">
+                            <h4>🤖 智谱清言</h4>
+                            <p><strong>功能特点：</strong></p>
+                            <ul>
+                                <li>优秀的中文理解和生成能力</li>
+                                <li>支持学术和专业领域对话</li>
+                                <li>开放的模型架构设计</li>
+                                <li>灵活的二次开发能力</li>
+                            </ul>
+                            <p><strong>使用场景：</strong>学术研究、专业写作、技术开发</p>
+                            <a href="https://chatglm.cn" target="_blank" class="try-btn">立即试用</a>
+                        </div>
+                    </div>
+
+                    <!-- 海外对话大模型工具 -->
+                    <div class="tool-card" data-tool="chatgpt" data-category="文本工具">
+                        <div class="tool-tag global">海外</div>
+                        <div class="tool-icon cyan"></div>
+                        <h3>ChatGPT</h3>
+                        <p>OpenAI 开发的智能对话助手，全球最受欢迎的 AI 对话工具</p>
+                        <div class="tool-content" style="display: none;">
+                            <h4>🤖 ChatGPT</h4>
+                            <p><strong>功能特点：</strong></p>
+                            <ul>
+                                <li>强大的自然语言理解能力</li>
+                                <li>支持多种语言和任务类型</li>
+                                <li>持续更新的知识库</li>
+                                <li>广泛的应用场景支持</li>
+                            </ul>
+                            <p><strong>使用场景：</strong>通用对话、学习辅导、内容创作、编程辅助</p>
+                            <a href="https://chat.openai.com" target="_blank" class="try-btn">立即试用</a>
+                        </div>
+                    </div>
+
+                    <div class="tool-card" data-tool="grok" data-category="文本工具">
+                        <div class="tool-tag global">海外</div>
+                        <div class="tool-icon purple"></div>
+                        <h3>Grok</h3>
+                        <p>xAI 开发的对话助手，具有独特的幽默感和实时信息访问能力</p>
+                        <div class="tool-content" style="display: none;">
+                            <h4>🤖 Grok AI</h4>
+                            <p><strong>功能特点：</strong></p>
+                            <ul>
+                                <li>独特的幽默感和个性化回答</li>
+                                <li>实时访问 X 平台信息</li>
+                                <li>支持复杂问题解答</li>
+                                <li>强大的上下文理解能力</li>
+                            </ul>
+                            <p><strong>使用场景：</strong>日常对话、信息查询、创意交流、社交媒体分析</p>
+                            <a href="https://www.x.ai/grok" target="_blank" class="try-btn">立即试用</a>
+                        </div>
+                    </div>
+
+                    <div class="tool-card" data-tool="claude" data-category="文本工具">
+                        <div class="tool-tag global">海外</div>
+                        <div class="tool-icon orange"></div>
+                        <h3>Claude AI</h3>
+                        <p>Anthropic 开发的对话助手，注重安全性和准确性</p>
+                        <div class="tool-content" style="display: none;">
+                            <h4>🤖 Claude AI</h4>
+                            <p><strong>功能特点：</strong></p>
+                            <ul>
+                                <li>强调安全和道德的对话体验</li>
+                                <li>支持长文本处理和分析</li>
+                                <li>优秀的推理和分析能力</li>
+                                <li>专业领域知识丰富</li>
+                            </ul>
+                            <p><strong>使用场景：</strong>专业写作、学术研究、数据分析</p>
+                            <a href="https://www.anthropic.com/claude" target="_blank" class="try-btn">立即试用</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="knowledge-section" id="knowledge">
+                <div class="section-header">
+                    <h2><span class="gradient-text">知识库</span><span class="normal-text">内容精选</span></h2>
+                    <p>探索日新月异的 AI 世界，每日都有新启发</p>
+                </div>
+                <div class="knowledge-grid">
+                    <div class="knowledge-card">
+                        <div class="card-text">
+                            <h4>知识库精选-2025年9月3日</h4>
+                            <p>《Nano Banana爆火后，我加上MCP让小红书点击率翻200%》《热门AI绘画工具盘点/测评》</p>
+                            <a href="src/pages/article-nano-banana.html" target="_blank">了解更多 →</a>
+                        </div>
+                        <div class="card-image">
+                            <img src="https://img.ljcdn.com/newhouse-activity/phpu3HhAp1757055009.svg+xml.600x.png" alt="文章配图">
+                        </div>
+                    </div>
+                    <div class="knowledge-card">
+                        <div class="card-text">
+                            <h4>知识库精选-2025年9月2日</h4>
+                            <p>《前Descript增长负责人：如何用100美金UGC视频实现10万美金效果？｜X增长》</p>
+                            <a href="src/pages/article-descript-growth.html" target="_blank">了解更多 →</a>
+                        </div>
+                        <div class="card-image">
+                            <img src="https://img.ljcdn.com/newhouse-activity/phpu3HhAp1757055009.svg+xml.600x.png" alt="文章配图">
+                        </div>
+                    </div>
+                    <div class="knowledge-card">
+                        <div class="card-text">
+                            <h4>知识库精选-2025年9月1日</h4>
+                            <p>《用CC从0开发了一个NB产品，能不能赚钱帮我瞅瞅？【附产品+喂饭级教程】》</p>
+                            <a href="src/pages/article-cc-product.html" target="_blank">了解更多 →</a>
+                        </div>
+                        <div class="card-image">
+                            <img src="https://img.ljcdn.com/newhouse-activity/phpu3HhAp1757055009.svg+xml.600x.png" alt="文章配图">
+                        </div>
+                    </div>
+                    <div class="knowledge-card">
+                        <div class="card-text">
+                            <h4>知识库精选-2025年8月31日</h4>
+                            <p>《盘点8月开源大模型！看看哪些你还不知道？》《Lovart 加 Nano Banana 无脑批量制作知识卡片海报》</p>
+                            <a href="#">了解更多 →</a>
+                        </div>
+                        <div class="card-image">
+                            <img src="https://img.ljcdn.com/newhouse-activity/phpu3HhAp1757055009.svg+xml.600x.png" alt="文章配图">
+                        </div>
+                    </div>
+                </div>
+                <div class="view-more-container">
+                    <button class="view-more-btn">查看更多</button>
+                </div>
+            </section>
+            <section class="products-section">
+                <div class="section-header">
+                    <h2><span class="gradient-text">最新AI产品</span><span class="normal-text">和工具</span></h2>
+                    <p>每日更新，帮你发现全球最新、最有趣的AI产品</p>
+                </div>
+                <div class="products-grid">
+                    <div class="product-card">
+                        <img src="https://img.ljcdn.com/newhouse-activity/phpu3HhAp1757055009.svg+xml.600x.png" alt="产品logo">
+                        <div class="product-info">
+                            <h3>AI Comic Factory</h3>
+                            <p>一个让你轻松创作漫画的AI工具</p>
+                        </div>
+                        <a href="#" class="visit-btn">访问</a>
+                    </div>
+                    <div class="product-card">
+                        <img src="https://img.ljcdn.com/newhouse-activity/phpu3HhAp1757055009.svg+xml.600x.png" alt="产品logo">
+                        <div class="product-info">
+                            <h3>Recast</h3>
+                            <p>一款能将任何文本内容转化为简短播客的AI工具</p>
+                        </div>
+                        <a href="#" class="visit-btn">访问</a>
+                    </div>
+                    <div class="product-card">
+                        <img src="https://img.ljcdn.com/newhouse-activity/phpu3HhAp1757055009.svg+xml.600x.png" alt="产品logo">
+                        <div class="product-info">
+                            <h3>AI Storyboard Generator</h3>
+                            <p>一款为视频创作者设计的AI故事板生成器</p>
+                        </div>
+                        <a href="#" class="visit-btn">访问</a>
+                    </div>
+                    <div class="product-card">
+                        <img src="https://img.ljcdn.com/newhouse-activity/phpu3HhAp1757055009.svg+xml.600x.png" alt="产品logo">
+                        <div class="product-info">
+                            <h3>ScreenLink</h3>
+                            <p>一款开源的浏览器截屏工具</p>
+                        </div>
+                        <a href="#" class="visit-btn">访问</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div class="footer-container">
+                <div class="footer-left">
+                    <img src="https://img.ljcdn.com/newhouse-activity/phpnxmeeh1757408864.png.600x.png?v=4" alt="花桥小智 Logo" class="footer-logo">
+                    <p>我们致力于为您提供最新、最全面的AI工具和资讯，助您在AI时代浪潮中乘风破浪。</p>
+                    <div class="social-icons">
+                        <a href="#" title="微信">💬</a>
+                        <a href="#" title="小红书">📱</a>
+                    </div>
+                </div>
+                <div class="footer-right">
+                    <div class="footer-links">
+                        <h4>网站导航</h4>
+                        <a href="index.html">首页</a>
+                        <a href="#tools">AI工具</a>
+                        <a href="#knowledge">知识库</a>
+                        <a href="src/pages/article-nano-banana.html">最新文章</a>
+                        <a href="src/pages/article-descript-growth.html">增长策略</a>
+                        <a href="src/pages/article-cc-product.html">产品开发</a>
+                    </div>
+                    <div class="footer-links">
+                        <h4>AI工具分类</h4>
+                        <a href="#tools" onclick="filterTools('文本工具')">文本工具</a>
+                        <a href="#tools" onclick="filterTools('图像工具')">图像工具</a>
+                        <a href="#tools" onclick="filterTools('视频工具')">视频工具</a>
+                        <a href="#tools" onclick="filterTools('音频工具')">音频工具</a>
+                        <a href="#tools" onclick="filterTools('效率工具')">效率工具</a>
+                    </div>
+                    <div class="footer-links">
+                        <h4>联系我们</h4>
+                        <a href="mailto:liyl64@ke.com">liyl64@ke.com</a>
+                        <a href="https://weixin.qq.com" target="_blank">关注公众号微信</a>
+                        <a href="https://www.xiaohongshu.com" target="_blank">小红书官方</a>
+                        <a href="https://github.com" target="_blank">GitHub开源</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 花桥小智. All rights reserved. | 京公网安备11010502012345 | 京ICP备20240215001号-1</p>
+        </div>
+        </footer>
+    </div>
+    
+    <script src="src/config/article-config.js"></script>
+    <script src="src/scripts/script.js"></script>
+</body>
+</html>
+
+
