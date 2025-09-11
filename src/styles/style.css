@@ -211,12 +211,56 @@ main {
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 8px 32px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: all 0.3s ease;
+    position: relative;
+    cursor: pointer;
 }
 
 .hero-image-container:hover {
-    transform: translateY(-5px);
+    transform: translateY(-5px) scale(1.02);
     box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+}
+
+.hero-image-container::after {
+    content: '点击开始对话';
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(135deg, #8A2BE2, #4158D0);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: 500;
+    opacity: 0;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(138, 43, 226, 0.3);
+}
+
+.hero-image-container:hover::after {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-5px);
+}
+
+.hero-image-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, 
+        rgba(138, 43, 226, 0) 0%,
+        rgba(138, 43, 226, 0) 60%,
+        rgba(138, 43, 226, 0.1) 100%
+    );
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.hero-image-container:hover::before {
+    opacity: 1;
 }
 
 .hero-image {

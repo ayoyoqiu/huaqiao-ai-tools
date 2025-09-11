@@ -91,7 +91,7 @@ class ChatModal {
         
         // 添加欢迎消息
         if (this.messagesContainer.children.length === 0) {
-            this.addMessage('您好！我是花桥小智，很高兴为您服务。请问有什么我可以帮您的吗？（需要申请公司APIkey，当前不可用）', 'bot');
+            this.addMessage('您好！我是花桥小智，很高兴为您服务。请问有什么我可以帮您的吗？', 'bot');
         }
     }
 
@@ -158,14 +158,36 @@ class ChatModal {
         const typingDiv = this.showTyping();
 
         try {
-            // 模拟API调用延迟
-            await new Promise(resolve => setTimeout(resolve, 1000));
+            const response = await fetch('https://bella.ke.com/agent/465852087828480', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${this.token}`
+                },
+                body: JSON.stringify({
+                    messages: [{
+                        role: 'user',
+                        content: message
+                    }]
+                })
+            });
+
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+
+            // 获取响应数据
+            const data = await response.json();
             
             // 隐藏输入中动画
             this.hideTyping(typingDiv);
             
-            // 添加提示消息
-            this.addMessage('抱歉，当前API服务不可用。需要申请公司APIkey才能使用对话功能。', 'bot');
+            // 添加机器人回复
+            if (data.choices && data.choices[0] && data.choices[0].message) {
+                this.addMessage(data.choices[0].message.content, 'bot');
+            } else {
+                throw new Error('Invalid response format');
+            }
         } catch (error) {
             console.error('发送消息失败:', error);
             this.hideTyping(typingDiv);
@@ -176,5 +198,5 @@ class ChatModal {
 
 // 初始化对话框
 document.addEventListener('DOMContentLoaded', () => {
-    window.chatModal = new ChatModal('d26d4f48988d40ccb70fdda47753864f');
+    window.chatModal = new ChatModal('2adfb06e8d0d46b9af2b22a0a8253f5c');
 });
