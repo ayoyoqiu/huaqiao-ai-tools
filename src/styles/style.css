@@ -86,27 +86,24 @@ header {
     color: #8A2BE2;
 }
 
-.language-switcher {
+.help-button {
     display: flex;
     align-items: center;
-    padding: 6px 14px;
-    border-radius: 20px;
+    padding: 4px 10px;
     cursor: pointer;
-    background-color: rgba(255, 255, 255, 0.8);
-    border: 1px solid rgba(138, 43, 226, 0.2);
-    backdrop-filter: blur(10px);
-    transition: all 0.3s ease;
+    background-color: transparent;
+    border: 1px solid transparent;
+    transition: all 0.2s ease;
+    position: relative;
 }
 
-.language-switcher:hover {
-    background-color: rgba(255, 255, 255, 0.9);
-    border-color: rgba(138, 43, 226, 0.3);
+.help-button:hover {
+    border-color: #999;
 }
 
-.language-switcher span {
+.help-button span {
     font-size: 14px;
-    font-weight: 500;
-    color: #333;
+    color: #666;
 }
 
 main {

@@ -514,6 +514,13 @@ function showToolModal(toolName) {
 
 // 页面初始化
 document.addEventListener('DOMContentLoaded', function() {
+    // 试用帮助按钮点击事件
+    const helpButton = document.querySelector('.help-button');
+    if (helpButton) {
+        helpButton.addEventListener('click', function() {
+            alert('功能开放中，敬请期待！');
+        });
+    }
     console.log('DOM Content Loaded');
     
     // 初始化工具筛选
